@@ -116,57 +116,9 @@
     font-size: 0.7rem;
   }
 
-  /* Prevent sections from exceeding viewport width */
-  .section,
-  .page,
-  main,
-  #app-content {
-    width: 100%;
-    max-width: 100vw;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    box-sizing: border-box;
+  html, body {
     overflow-x: hidden;
-  }
-
-  /* Force multi-column layout wrappers to stack vertically */
-  .contact-container,
-  .contact-wrapper,
-  .contact-grid,
-  .form-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    gap: 24px !important;
-  }
-
-  /* Force side-by-side form input rows (e.g., Name + Phone) to single column */
-  .form-row,
-  .input-group-row {
-    display: flex !important;
-    flex-direction: column !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    gap: 16px !important;
-  }
-
-  /* Ensure input fields, textareas, and select dropdowns fill full width */
-  input,
-  select,
-  textarea,
-  .form-control,
-  .form-group {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Compact section header typography on mobile */
-  .section-title {
-    font-size: 1.6rem !important;
-    line-height: 1.25 !important;
-    word-break: break-word;
+    width: 100%;
   }
 
   /* Force grid containers on contact/services pages to stack vertically */
