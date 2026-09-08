@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Gate Electromechanical Works LLC</title>
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #0F382C;        /* Dark Sustainable Emerald */
+      --primary-light: #185343;  /* Lighter Accent Green */
+      --accent: #D4A373;         /* Warm Gold/Sand Accent */
+      --accent-hover: #C29060;
+      --secondary: #1E293B;      /* Deep Slate Blue */
+      --light-bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand-font {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: var(--secondary);
+      color: #94A3B8;
+      font-size: 0.85rem;
+      padding: 8px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .top-info span {
+      margin-right: 20px;
+    }
+
+    .top-info i {
+      color: var(--accent);
+      margin-right: 6px;
+    }
+
+    /* Navigation */
+    header {
+      background-color: var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 1.4rem;
+      box-shadow: 0 4px 10px rgba(15, 56, 44, 0.2);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--primary);
+      letter-spacing: 1.5px;
+      line-height: 1.1;
+    }
+
+    .logo-subtitle {
+      font-size: 0.65rem;
+      font-weight: 200;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(15, 56, 44, 0.25);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: var(--secondary);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Page System */
+    .page {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, rgba(15, 56, 44, 0.92), rgba(30, 41, 59, 0.88)), 
+                  url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      padding: 100px 5% 120px;
+      text-align: left;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 3.2rem;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #E2E8F0;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 15px;
+    }
+
+    .hero-badge {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .badge-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .badge-icon {
+      width: 50px;
+      height: 50px;
+      background-color: var(--accent);
+      color: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 80px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .tagline {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.3rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 35px 30px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: #F0FDF4;
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--secondary);
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .service-link {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    /* Filter Controls for Services/Projects */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Project Cards */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      border: 1px solid var(--border);
+    }
+
+    .project-img {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .project-tag {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(15, 56, 44, 0.85);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      backdrop-filter: blur(5px);
+    }
+
+    .project-info {
+      padding: 25px;
+    }
+
+    .project-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .project-info p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Calculator Widget */
+    .calculator-container {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--secondary);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(15, 56, 44, 0.1);
+    }
+
+    .calc-result {
+      margin-top: 25px;
+      padding: 20px;
+      background-color: #F0FDF4;
+      border-radius: 8px;
+      border: 1px solid #BBF7D0;
+      text-align: center;
+      display: none;
+    }
+
+    .calc-result h4 {
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--secondary);
+      color: #94A3B8;
+      padding: 70px 5% 20px;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-logo {
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-about p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .footer-title {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+
+    /* Modal System */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      padding: 35px;
+      position: relative;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    /* Responsiveness */
+    @media (max-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Can be expanded to mobile drawer */
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+      .top-bar {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="top-info">
+      <span><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
+      <span><i class="fa-solid fa-phone"></i> +971 5 893 58287</span>
+      <span><i class="fa-solid fa-envelope"></i> info@sustainablegate.ae</span>
+    </div>
+    <div class="top-hours">
+      <i class="fa-regular fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <a class="logo-container" href="index.html">
+  <div class="logo-icon-card">
+    <img src="logo.jpg" alt="Sustainable Gate Logo" class="card-logo-img">
+  </div>
+  <div class="logo-text">
+    <span class="logo-title">SUSTAINABLE GATE</span>
+    <span class="logo-subtitle">ELECTRO MECHANICAL WORKS</span>
+  </div>
+</a>
+      
+      <ul class="nav-links">
+        <li><a id="nav-home" class="active" onclick="navigateTo('home')">Home</a></li>
+        <li><a id="nav-services" onclick="navigateTo('services')">Services</a></li>
+        <li><a id="nav-about" onclick="navigateTo('about')">About Us</a></li>
+        <li><a id="nav-projects" onclick="navigateTo('projects')">Projects</a></li>
+        <li><a id="nav-estimator" onclick="navigateTo('estimator')">Cost Estimator</a></li>
+        <li><a id="nav-contact" onclick="navigateTo('contact')">Contact</a></li>
+      </ul>
+
+      <button class="btn btn-primary" onclick="navigateTo('contact')">
+        <i class="fa-solid fa-paper-plane"></i> Get A Quote
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE 1: HOME PAGE -->
+  <div id="page-home" class="page active">
+    <section class="hero">
+      <div class="hero-container">
+        <div>
+          <h1 class="hero-title">Precision <span>Electromechanical</span> & Maintenance Solutions</h1>
+          <p class="hero-subtitle">Providing sustainable HVAC, carpentry, electrical, plumbing, tiling, and cladding engineering for commercial and residential sectors across the UAE.</p>
+          <div class="hero-cta">
+            <button class="btn btn-accent" onclick="navigateTo('services')">Explore Services</button>
+            <button class="btn btn-primary" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);" onclick="navigateTo('contact')">Consult Our Engineers</button>
+          </div>
+        </div>
+        <div class="hero-badge">
+          <div class="badge-item">
+            <div class="badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h4>ISO Certified Quality</h4>
+              <p style="font-size: 0.85rem; color: #CBD5E1;">Compliant with highest international safety & engineering standards.</p>
+            </div>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <h4>24/7 Rapid Maintenance</h4>
+              <p style="font-size: 0.85rem; color: #CBD5E1;">On-demand emergency electromechanical repairs.</p>
+            </div>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon"><i class="fa-solid fa-recycle"></i></div>
+            <div>
+              <h4>Eco-Conscious Focus</h4>
+              <p style="font-size: 0.85rem; color: #CBD5E1;">Sustainable materials and energy-efficient systems installation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Capabilities Overview -->
+    <section class="section">
+      <div class="section-header">
+        <span class="tagline">Our Specialization</span>
+        <h2 class="section-title">Comprehensive Engineering Solutions</h2>
+        <p class="section-description">Delivering end-to-end technical works with precision craftsmanship and sustainable principles.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-fan"></i></div>
+          <h3>HVAC & Air Filtration</h3>
+          <p>Complete installation and preventive maintenance of central air-conditioning, ventilation ducts, and clean-air filtration systems.</p>
+          <a class="service-link" onclick="openModal('HVAC & Air Filtration Systems', 'Our HVAC team handles complete load calculations, duct installation, FCU/AHU overhaul, and specialized air filtration systems designed for UAE climatic requirements.')">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+          <h3>Electrical Repairing & Fitting</h3>
+          <p>Design, troubleshooting, and fitting of electrical networks, breaker panels, emergency lighting, and fixtures.</p>
+          <a class="service-link" onclick="openModal('Electrical Fittings & Maintenance', 'Certified electricians delivering power distribution, DB dressing, load balancing, fault detection, and architectural lighting installation.')">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+          <h3>Plumbing & Sanitary Works</h3>
+          <p>Industrial and residential plumbing lines, sanitary fixtures installation, drainage systems, and water pressure management.</p>
+          <a class="service-link" onclick="openModal('Plumbing & Sanitary Services', 'High-grade piping (PPR, HDPE, UPVC), water heater installations, luxury sanitary fitting, and leak detection systems.')">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+          <h3>Carpentry Workshop</h3>
+          <p>Bespoke custom woodwork, interior cabinetry, decorative timber structures, and structural wood repairs.</p>
+          <a class="service-link" onclick="openModal('Carpentry Workshop Services', 'In-house workshop capability producing custom furniture, door frames, office partitions, and architectural wood cladding.')">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
+          <h3>Floor & Wall Tiling</h3>
+          <p>Precision installation of ceramic, porcelain, marble, and granite tiles for high-footfall commercial or luxury residential spaces.</p>
+          <a class="service-link" onclick="openModal('Floor & Wall Tiling', 'Expert tile levelling, waterproof underlayment, custom pattern alignment, and tile restoration.')">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Plaster & Cladding Works</h3>
+          <p>Exterior facade cladding, thermal insulation plastering, decorative wall finishes, and protective structural coatings.</p>
+          <a class="service-link" onclick="openModal('Plaster & Cladding Works', 'Specialized aluminum composite panel cladding, exterior insulation finish systems (EIFS), and decorative smooth plastering.')">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 2: SERVICES (DETAILED FULL CATALOG) -->
+  <div id="page-services" class="page">
+    <section class="section">
+      <div class="section-header">
+        <span class="tagline">Complete Technical Scope</span>
+        <h2 class="section-title">Services & Expertise</h2>
+        <p class="section-description">Detailed breakdown of our licensed electromechanical & fit-out capabilities.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterServices('all')">All Services</button>
+        <button class="filter-btn" onclick="filterServices('mep')">HVAC & MEP</button>
+        <button class="filter-btn" onclick="filterServices('interiors')">Fit-Out & Interiors</button>
+        <button class="filter-btn" onclick="filterServices('civil')">Civil & Finishes</button>
+      </div>
+
+      <div class="services-grid" id="full-services-grid">
+        <!-- HVAC -->
+        <div class="service-card" data-category="mep">
+          <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
+          <h3>Air-Conditioning & Air Filtration</h3>
+          <p>Chilled water systems, split/VRF units, ventilation ducts, HEPA air filters, and regular preventative maintenance contracts.</p>
+        </div>
+
+        <!-- Electromechanical -->
+        <div class="service-card" data-category="mep">
+          <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+          <h3>Electromechanical Equipment</h3>
+          <p>Industrial motor pumps, generator set maintenance, mechanical plant installations, and automated control integration.</p>
+        </div>
+
+        <!-- Electrical -->
+        <div class="service-card" data-category="mep">
+          <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Electrical Fittings & Repairs</h3>
+          <p>Cable tray installation, main distribution boards (MDBs), lighting automation, and power factor correction.</p>
+        </div>
+
+        <!-- Carpentry -->
+        <div class="service-card" data-category="interiors">
+          <div class="service-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+          <h3>Carpentry Workshop</h3>
+          <p>Custom millwork, bespoke wood paneling, executive desks, wooden doors, and decorative pergolas.</p>
+        </div>
+
+        <!-- Partitions -->
+        <div class="service-card" data-category="interiors">
+          <div class="service-icon"><i class="fa-solid fa-table-cells-large"></i></div>
+          <h3>False Ceiling & Partitions</h3>
+          <p>Gypsum board ceilings, acoustic grid ceilings, dry wall partitions, and glass office dividers.</p>
+        </div>
+
+        <!-- Tiling -->
+        <div class="service-card" data-category="civil">
+          <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
+          <h3>Floor & Wall Tiling Works</h3>
+          <p>Heavy-duty industrial tile flooring, luxury marble fit-outs, waterproof mosaic tiling for pools and bathrooms.</p>
+        </div>
+
+        <!-- Plaster -->
+        <div class="service-card" data-category="civil">
+          <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+          <h3>Plaster & Cladding Works</h3>
+          <p>Internal wall plastering, exterior thermal insulation finish systems, stone cladding, and ACP aluminum paneling.</p>
+        </div>
+
+        <!-- Plumbing -->
+        <div class="service-card" data-category="mep">
+          <div class="service-icon"><i class="fa-solid fa-faucet"></i></div>
+          <h3>Plumbing & Sanitary</h3>
+          <p>Complete piping distribution, booster pump repairs, grease trap maintenance, and luxury sanitary fixture fitting.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 3: ABOUT US -->
+  <div id="page-about" class="page">
+    <section class="section">
+      <div class="section-header">
+        <span class="tagline">Who We Are</span>
+        <h2 class="section-title">Sustainable Engineering Excellence</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 60px;">
+        <div>
+          <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px;">Reliable Electromechanical Partners in the UAE</h3>
+          <p style="color: var(--text-muted); margin-bottom: 15px;">
+            <strong>Sustainable Gate Electromechanical Works LLC</strong> was established with a singular focus: delivering top-tier electromechanical, fitting, and civil maintenance solutions with an unwavering commitment to quality and sustainability.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">
+            We operate in strict accordance with UAE regulatory guidelines, offering comprehensive integrated technical services for commercial towers, residential villas, industrial plants, and retail spaces.
+          </p>
+          <div style="display: flex; gap: 30px;">
+            <div>
+              <h2 style="color: var(--accent); font-size: 2.2rem;">100+</h2>
+              <p style="font-size: 0.85rem; font-weight: 600;">Projects Delivered</p>
+            </div>
+            <div>
+              <h2 style="color: var(--accent); font-size: 2.2rem;">50+</h2>
+              <p style="font-size: 0.85rem; font-weight: 600;">Engineers & Skilled Crew</p>
+            </div>
+          </div>
+        </div>
+        <div style="background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80') center/cover; height: 380px; border-radius: 16px; box-shadow: var(--shadow);"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 4: PROJECTS -->
+  <div id="page-projects" class="page">
+    <section class="section">
+      <div class="section-header">
+        <span class="tagline">Our Portfolio</span>
+        <h2 class="section-title">Recent Completed Works</h2>
+        <p class="section-description">A showcase of our electromechanical installations and interior technical executions.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80');">
+            <span class="project-tag">HVAC & MEP</span>
+          </div>
+          <div class="project-info">
+            <h3>Commercial Tower Chilled Water System</h3>
+            <p>Full overhaul and maintenance of 400-ton AHU units and ventilation ducting in Business Bay, Dubai.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80');">
+            <span class="project-tag">Civil & Fit-Out</span>
+          </div>
+          <div class="project-info">
+            <h3>Luxury Villa Interior Cladding & Tiling</h3>
+            <p>Precision marble floor installation, false ceiling LED integration, and bespoke woodwork in Palm Jumeirah.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80');">
+            <span class="project-tag">Carpentry</span>
+          </div>
+          <div class="project-info">
+            <h3>Corporate Executive Office Workshop Fit-Out</h3>
+            <p>In-house custom carpentry partitions, acoustic ceiling lining, and sanitary line installations in JLT, Dubai.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 5: COST ESTIMATOR -->
+  <div id="page-estimator" class="page">
+    <section class="section">
+      <div class="section-header">
+        <span class="tagline">Instant Estimator</span>
+        <h2 class="section-title">Service Cost Calculator</h2>
+        <p class="section-description">Get an instant preliminary estimate for your project or maintenance contract.</p>
+      </div>
+
+      <div class="calculator-container">
+        <form id="calcForm" onsubmit="calculateCost(event)">
+          <div class="form-group">
+            <label for="serviceType">Select Work Type</label>
+            <select id="serviceType" class="form-control" required>
+              <option value="hvac">Air-Conditioning & Ventilation</option>
+              <option value="electrical">Electrical Fitting & Maintenance</option>
+              <option value="plumbing">Plumbing & Sanitary Works</option>
+              <option value="tiling">Floor & Wall Tiling</option>
+              <option value="carpentry">Carpentry & Woodwork</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="areaSize">Approximate Area (Sq. Ft.)</label>
+            <input type="number" id="areaSize" class="form-control" placeholder="e.g. 1500" min="50" required>
+          </div>
+
+          <div class="form-group">
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType" class="form-control">
+              <option value="1">Residential Villa / Apartment</option>
+              <option value="1.2">Commercial Office / Retail</option>
+              <option value="1.4">Industrial Warehouse / Facility</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Calculate Estimate</button>
+        </form>
+
+        <div id="calcResult" class="calc-result">
+          <p style="font-weight: 600; color: var(--text-muted); font-size: 0.9rem;">Estimated Range</p>
+          <h4 id="costOutput">AED 0 - AED 0</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">*Final quote subject to site inspection by our engineers.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 6: CONTACT US -->
+  <div id="page-contact" class="page">
+    <section class="section">
+      <div class="section-header">
+        <span class="tagline">Get In Touch</span>
+        <h2 class="section-title">Contact Sustainable Gate LLC</h2>
+        <p class="section-description">Request a consultation, emergency maintenance, or formal quotation.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px;">
+        <div style="background: var(--surface); padding: 35px; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="margin-bottom: 25px; color: var(--primary);">Contact Details</h3>
+          
+          <div style="margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <i class="fa-solid fa-location-dot" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
+            <div>
+              <strong>Office Location</strong>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Dubai, United Arab Emirates</p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <i class="fa-solid fa-phone" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
+            <div>
+              <strong>Phone & WhatsApp</strong>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">+971 5 893 58287 /  Tel: 04-2884127</p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <i class="fa-solid fa-envelope" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
+            <div>
+              <strong>Email Inquiries</strong>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">info@sustainablegate.ae</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--surface); padding: 35px; border-radius: 12px; border: 1px solid var(--border);">
+          <form onsubmit="event.preventDefault(); alert('Thank you for contacting Sustainable Gate Electromechanical Works. Our engineers will reach out within 24 hours.');">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+971 -- --- ----" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" class="form-control" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+              <label>Service Required</label>
+              <select class="form-control">
+                <option>Air-Conditioning & Ventilation</option>
+                <option>Carpentry Workshop Works</option>
+                <option>Electrical Repairs & Fitting</option>
+                <option>Electromechanical Equipment</option>
+                <option>False Ceiling & Partitions</option>
+                <option>Plumbing & Sanitary Works</option>
+                <option>Floor & Wall Tiling</option>
+                <option>Plaster & Cladding</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Project Details / Message</label>
+              <textarea class="form-control" rows="4" placeholder="Describe your requirement..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <i class="fa-solid fa-leaf" style="color: var(--accent);"></i> SUSTAINABLE GATE
+        </div>
+        <p>Sustainable Gate Electromechanical Works LLC is a premier provider of MEP, fit-out, civil, and maintenance services committed to quality execution across the UAE.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a onclick="navigateTo('home')">Home</a></li>
+          <li><a onclick="navigateTo('services')">All Services</a></li>
+          <li><a onclick="navigateTo('about')">About Company</a></li>
+          <li><a onclick="navigateTo('estimator')">Cost Estimator</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Services</h4>
+        <ul class="footer-links">
+          <li><a onclick="navigateTo('services')">HVAC & Filtration</a></li>
+          <li><a onclick="navigateTo('services')">Electrical Works</a></li>
+          <li><a onclick="navigateTo('services')">Plumbing Systems</a></li>
+          <li><a onclick="navigateTo('services')">Carpentry Workshop</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Compliance & Quality</h4>
+        <p style="font-size: 0.85rem; line-height: 1.6;">Registered & Licensed Electromechanical Works Operator under UAE Municipality Standards.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Sustainable Gate Electromechanical Works LLC. All rights reserved.</div>
+      <div>Privacy Policy | Terms of Service</div>
+    </div>
+  </footer>
+
+  <!-- Detail Modal -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle" style="color: var(--primary); margin-bottom: 15px;"></h3>
+      <p id="modalDescription" style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;"></p>
+      <button class="btn btn-primary" onclick="closeModal(); navigateTo('contact');">Inquire About This Service</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Navigation Page Switching
+    function navigateTo(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+
+      const targetPage = document.getElementById('page-' + pageId);
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+
+      const navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(link => link.classList.remove('active'));
+      const activeNav = document.getElementById('nav-' + pageId);
+      if (activeNav) {
+        activeNav.classList.add('active');
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Modal Functionality
+    function openModal(title, description) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDescription').innerText = description;
+      document.getElementById('serviceModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('serviceModal').style.display = 'none';
+    }
+
+    // Service Filtering
+    function filterServices(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('#full-services-grid .service-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Cost Estimator Function
+    function calculateCost(e) {
+      e.preventDefault();
+      const service = document.getElementById('serviceType').value;
+      const area = parseFloat(document.getElementById('areaSize').value);
+      const multiplier = parseFloat(document.getElementById('propertyType').value);
+
+      let baseRate = 15; // AED per sqft
+      if (service === 'hvac') baseRate = 22;
+      if (service === 'electrical') baseRate = 18;
+      if (service === 'plumbing') baseRate = 16;
+      if (service === 'tiling') baseRate = 25;
+      if (service === 'carpentry') baseRate = 30;
+
+      const minEstimate = Math.round(area * baseRate * multiplier);
+      const maxEstimate = Math.round(minEstimate * 1.25);
+
+      document.getElementById('costOutput').innerText = `AED ${minEstimate.toLocaleString()} - AED ${maxEstimate.toLocaleString()}`;
+      document.getElementById('calcResult').style.display = 'block';
+    }
+
+    // Close modal when clicking outside box
+    window.onclick = function(event) {
+      const modal = document.getElementById('serviceModal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
