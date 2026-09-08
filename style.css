@@ -44,3 +44,75 @@
   text-transform: uppercase;
   margin-top: 1px;
 }
+
+/* Mobile Responsive Adjustments for Header Header & Logo */
+@media screen and (max-width: 768px) {
+  /* Navbar spacing and layout */
+  .navbar {
+    padding: 10px 12px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  /* Logo container alignment */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 0; /* Prevents overflow */
+  }
+
+  /* Logo Image alignment fix */
+  .logo-icon-card {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-logo-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Title & Subtitle scaling */
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .logo-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.3px;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .logo-subtitle {
+    font-size: 0.48rem;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
+  /* Compact 'Get A Quote' Button */
+  .navbar .btn-primary {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .navbar .btn-primary i {
+    font-size: 0.7rem;
+  }
+}
