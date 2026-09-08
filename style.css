@@ -159,4 +159,40 @@
     width: 100% !important;
     box-sizing: border-box !important;
   }
+
+  /* Header Top Bar Container */
+  .top-bar, 
+  .header-top, 
+  [class*="top-bar"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px 14px !important;
+    padding: 8px 12px !important;
+    text-align: center;
+  }
+
+  /* Individual Info Items (Location, Phone, Email, Hours) */
+  .top-bar-item, 
+  .header-top-item, 
+  .top-bar a, 
+  .top-bar span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    font-size: 0.72rem !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Ensure Mail Icon & Link stays together on its own clean line if wrapped */
+  .top-bar-item:has(a[href*="mailto"]),
+  .top-bar a[href*="mailto"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 2px;
+  }
 }
