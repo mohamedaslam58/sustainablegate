@@ -144,28 +144,6 @@ function filterServices(category) {
   });
 }
 
-// Cost Estimator Function
-function calculateCost(e) {
-  e.preventDefault();
-  const service = document.getElementById("serviceType").value;
-  const area = parseFloat(document.getElementById("areaSize").value);
-  const multiplier = parseFloat(document.getElementById("propertyType").value);
-
-  let baseRate = 15; // AED per sqft
-  if (service === "hvac") baseRate = 22;
-  if (service === "electrical") baseRate = 18;
-  if (service === "plumbing") baseRate = 16;
-  if (service === "tiling") baseRate = 25;
-  if (service === "carpentry") baseRate = 30;
-
-  const minEstimate = Math.round(area * baseRate * multiplier);
-  const maxEstimate = Math.round(minEstimate * 1.25);
-
-  document.getElementById("costOutput").innerText =
-    `AED ${minEstimate.toLocaleString()} - AED ${maxEstimate.toLocaleString()}`;
-  document.getElementById("calcResult").style.display = "block";
-}
-
 // Auto-playing Carousel with Navigation Arrows
 (function initHomeServicesCarousel() {
   const carousel = document.getElementById("home-services-carousel");
