@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Gate Electromechanical Works LLC</title>
+
+    <!-- Square Favicon for Browsers -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
+
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="top-info">
+            <span><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
+            <span><i class="fa-solid fa-phone"></i> +971 5 893 58287</span>
+            <span><i class="fa-solid fa-envelope"></i> info@sustainablegate.ae</span>
+        </div>
+        <div class="top-hours">
+            <i class="fa-regular fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <a class="logo-container" href="index.html">
+                <div class="logo-icon-card">
+                    <img src="logo.jpg" alt="Sustainable Gate Logo" class="card-logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="font-oswald logo-title">SUSTAINABLE GATE</span>
+                    <span class="font-oswald logo-subtitle">ELECTRO MECHANICAL WORKS</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a id="nav-home" class="active" onclick="navigateTo('home', event)">Home</a></li>
+                <li><a id="nav-services" onclick="navigateTo('services', event)">Services</a></li>
+                <li><a id="nav-about" onclick="navigateTo('about', event)">About Us</a></li>
+                <li><a id="nav-projects" onclick="navigateTo('projects', event)">Projects</a></li>
+                <li><a id="nav-estimator" onclick="navigateTo('estimator', event)">Cost Estimator</a></li>
+                <li><a id="nav-contact" onclick="navigateTo('contact', event)">Contact</a></li>
+            </ul>
+
+            <button class="btn btn-primary" onclick="navigateTo('contact')">
+                <i class="fa-solid fa-paper-plane"></i> Get A Quote
+            </button>
+        </nav>
+    </header>
+
+    <div id="page-low-current" class="page active">
+        <!-- Service Hero Banner -->
+        <section class="service-hero-banner section">
+            <div class="container">
+                <a href="./index.html#services" onclick="navigateTo('services', event)" class="back-nav-link">
+                    <i class="fa-solid fa-arrow-left"></i> Back to All Services
+                </a>
+                <div class="hero-badge">Specialized Trade Engineering</div>
+                <h1 class="hero-title">Low Current & ELV Systems</h1>
+                <p class="hero-description">
+                    Advanced extra-low voltage (ELV) solutions, security systems, structured cabling, audio-visual
+                    networks, and building automation integrated for smart operations.
+                </p>
+            </div>
+        </section>
+
+        <!-- Service Details Content Section -->
+        <section class="section">
+            <div class="container service-grid-layout">
+
+                <!-- Main Left Column -->
+                <main class="service-main-body">
+
+                    <!-- Overview Card -->
+                    <article class="content-card">
+                        <h2 class="card-heading"><i class="fa-solid fa-network-wired"></i> Service Overview</h2>
+                        <p class="lead-text">
+                            Sustainable Gate Electromechanical Works LLC provides comprehensive Extra-Low Voltage (ELV)
+                            and low-current system engineering for commercial, residential, and industrial developments
+                            across the UAE. We design, install, and integrate cutting-edge security, communication, and
+                            automation infrastructures adhering strictly to SIRA, MCC, and local authority mandates.
+                        </p>
+                    </article>
+
+                    <!-- Key Offerings Card -->
+                    <article class="content-card">
+                        <h3 class="card-subheading">Key Offerings Included</h3>
+                        <div class="offerings-grid">
+                            <div class="offering-box">
+                                <div class="offering-icon"><i class="fa-solid fa-video"></i></div>
+                                <div class="offering-info">
+                                    <h4>CCTV Surveillance & Access Control</h4>
+                                    <p>SIRA-compliant IP video management systems, biometric access controllers,
+                                        turnstiles, and gate barrier integrations.</p>
+                                </div>
+                            </div>
+
+                            <div class="offering-box">
+                                <div class="offering-icon"><i class="fa-solid fa-bell"></i></div>
+                                <div class="offering-info">
+                                    <h4>Fire Alarm & Voice Evacuation Systems</h4>
+                                    <p>Addressable fire detection panels, emergency voice alarm systems (EVAC), and
+                                        DCD-certified life safety networks.</p>
+                                </div>
+                            </div>
+
+                            <div class="offering-box">
+                                <div class="offering-icon"><i class="fa-solid fa-ethernet"></i></div>
+                                <div class="offering-info">
+                                    <h4>Structured Cabling & ICT Infrastructure</h4>
+                                    <p>Cat6A/Cat7 fiber optic backbones, active networking gear, server rack management,
+                                        and telecom room setups.</p>
+                                </div>
+                            </div>
+
+                            <div class="offering-box">
+                                <div class="offering-icon"><i class="fa-solid fa-tv"></i></div>
+                                <div class="offering-info">
+                                    <h4>AV & Public Address (PA) Networks</h4>
+                                    <p>SMATV/IPTV systems, background music (BGM), conference room AV automation, and
+                                        public address speaker layouts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Process Card -->
+                    <article class="content-card">
+                        <h3 class="card-subheading">Our ELV System Integration Process</h3>
+                        <div class="process-steps">
+                            <div class="process-step-item">
+                                <span class="step-num">01</span>
+                                <div class="step-details">
+                                    <h4>System Design & Authority Approvals</h4>
+                                    <p>Developing schematic network architecture and obtaining necessary clearances from
+                                        SIRA, Civil Defence, and local authorities.</p>
+                                </div>
+                            </div>
+
+                            <div class="process-step-item">
+                                <span class="step-num">02</span>
+                                <div class="step-details">
+                                    <h4>Cable Containment & Pulling</h4>
+                                    <p>Installing dedicated trunking, conduits, tray systems, and running high-speed
+                                        data and fiber cables across zones.</p>
+                                </div>
+                            </div>
+
+                            <div class="process-step-item">
+                                <span class="step-num">03</span>
+                                <div class="step-details">
+                                    <h4>Field Device & Rack Termination</h4>
+                                    <p>Mounting cameras, sensors, card readers, patch panels, speakers, and setting up
+                                        central control server racks.</p>
+                                </div>
+                            </div>
+
+                            <div class="process-step-item">
+                                <span class="step-num">04</span>
+                                <div class="step-details">
+                                    <h4>Programming, Testing & SIRA Certification</h4>
+                                    <p>System configuration, OTDR/Fluke cable testing, live signal tests, SIRA
+                                        inspection clearing, and client handover.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </main>
+
+                <!-- Sidebar Right Column -->
+                <aside class="service-sidebar">
+
+                    <!-- Call to Action Box -->
+                    <div class="sidebar-widget cta-widget">
+                        <div class="widget-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Need ELV & Security Integration?</h3>
+                        <p>Consult with our low-current systems specialists for compliant security and communication
+                            engineering.</p>
+                        <a href="./index.html#contact" onclick="navigateTo('contact', event)" class="btn-sidebar-cta">
+                            Inquire for Low Current <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service Quick Navigation -->
+                    <div class="sidebar-widget nav-widget">
+                        <h3>Other Services</h3>
+                        <nav class="sidebar-nav-list">
+                            <a href="./tender.html" class="nav-item">
+                                <span>Tender & Estimating</span> <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="./design.html" class="nav-item">
+                                <span>Design Services</span> <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="./construction.html" class="nav-item">
+                                <span>Construction Services</span> <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="./maintenance.html" class="nav-item">
+                                <span>Maintenance Services</span> <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="./commercial.html" class="nav-item">
+                                <span>Commercial Services</span> <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="./electrical.html" class="nav-item">
+                                <span>Electrical Services</span> <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="./plumbing.html" class="nav-item">
+                                <span>Plumbing Services</span> <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </nav>
+                    </div>
+
+                </aside>
+
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+        <a class="logo-container" href="index.html"
+          style="width: fit-content; background-color: whitesmoke; padding-right: 4px; margin-bottom: 8px;">
+          <div class="logo-icon-card">
+            <img src="logo.jpg" alt="Sustainable Gate Logo" class="card-logo-img">
+          </div>
+          <div class="logo-text">
+            <span class="font-oswald logo-title">SUSTAINABLE GATE</span>
+            <span class="font-oswald logo-subtitle">ELECTRO MECHANICAL WORKS</span>
+          </div>
+        </a>
+        <p>Sustainable Gate Electromechanical Works LLC is a premier provider of MEP, fit-out, civil, and maintenance
+          services committed to quality execution across the UAE.</p>
+      </div>
+
+            <div>
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a onclick="navigateTo('home')" style="cursor: pointer;">Home</a></li>
+                    <li><a onclick="navigateTo('services')" style="cursor: pointer;">All Services</a></li>
+                    <li><a onclick="navigateTo('about')" style="cursor: pointer;">About Company</a></li>
+                    <li><a onclick="navigateTo('projects')" style="cursor: pointer;">Completed Projects</a></li>
+                    <li><a onclick="navigateTo('estimator')" style="cursor: pointer;">Cost Estimator</a></li>
+                    <li><a onclick="navigateTo('contact')" style="cursor: pointer;">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="./tender.html" style="cursor: pointer;">Tender</a></li>
+                    <li><a href="./design.html" style="cursor: pointer;">Design</a></li>
+                    <li><a href="./construction.html" style="cursor: pointer;">Construction</a></li>
+                    <li><a href="./maintenance.html" style="cursor: pointer;">Maintenance</a></li>
+                    <li><a href="./commercial.html" style="cursor: pointer;">Commercial</a></li>
+                    <li><a href="./electrical.html" style="cursor: pointer;">Electrical</a></li>
+                    <li><a href="./plumbing.html" style="cursor: pointer;">Plumbing</a></li>
+                    <li><a href="./low-current.html" style="cursor: pointer;">Low Current</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Compliance & Quality</h4>
+                <p style="font-size: 0.85rem; line-height: 1.6;">Registered & Licensed Electromechanical Works Operator
+                    under
+                    UAE Municipality Standards.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2026 Sustainable Gate Electromechanical Works LLC. All rights reserved.</div>
+            <div>Privacy Policy | Terms of Service</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
