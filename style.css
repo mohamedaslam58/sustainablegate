@@ -566,7 +566,7 @@ footer {
 
 .footer-about p {
   font-size: 0.9rem;
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
@@ -736,7 +736,6 @@ footer {
 /* Happy Clients Section */
 .clients-section {
   background-color: #f8fafc;
-  padding: 60px 0;
 }
 
 .clients-slider-wrapper {
@@ -1066,6 +1065,194 @@ ul, ol {
   color: #008844;
 }
 
+/* Container Box */
+.hero-badge-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 480px;
+  padding: 28px;
+  background: rgba(30, 41, 59, 0.7); /* Translucent surface */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Individual Item Row */
+.badge-item {
+  display: flex;
+  align-items: flex-start; /* Aligns icon with the first line of text */
+  gap: 16px;
+}
+
+/* Icon Container */
+.badge-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #D97706; /* Gold/Amber Accent */
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+}
+
+/* Content Column */
+.badge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Title Styling */
+.badge-content h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  text-transform: none; /* Sentence case restores readability */
+}
+
+/* Description Text */
+.badge-content p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #94A3B8;
+  line-height: 1.45;
+}
+
+/* Footer Social & Location Container */
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* Individual Button Style */
+.footer-social-links .social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover Effects */
+.footer-social-links .social-btn:hover {
+  transform: translateY(-3px);
+  color: #FFFFFF;
+}
+
+.footer-social-links .social-btn.facebook:hover {
+  background-color: #1877F2;
+  border-color: #1877F2;
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.35);
+}
+
+.footer-social-links .social-btn.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(220, 39, 67, 0.35);
+}
+
+.footer-social-links .social-btn.location:hover {
+  background-color: #EA4335;
+  border-color: #EA4335;
+  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.35);
+}
+
+/* Base Toggle Button (Hidden on Desktop) */
+.hamburger-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #0f172a;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.hamburger-toggle .icon-close {
+  display: none;
+}
+
+.hamburger-toggle.active .icon-open {
+  display: none;
+}
+
+.hamburger-toggle.active .icon-close {
+  display: block;
+}
+
+/* Desktop default styles (Outside of media query) */
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr; /* 4 distinct columns */
+  gap: 30px;
+}
+
+/* This unwraps the div on desktop so Quick Links & Services act as independent grid items */
+.footer-links-group {
+  display: contents; 
+}
+
+.project-details, .project-scope {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+.project-meta {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.75rem;
+  font-size: 0.825rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 0.75rem;
+  color: #64748b;
+}
+
+.project-meta li {
+  margin-bottom: 0.25rem;
+}
+
+.project-meta strong {
+  color: #0f172a;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Switches from display: contents to a 2-column grid on mobile */
+  .footer-links-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
 /* Responsive Breakdown */
 @media (max-width: 992px) {
   .service-grid-layout {
@@ -1282,5 +1469,64 @@ ul, ol {
   .client-logo-card {
     flex: 0 0 calc(50% - 16px);
     min-width: calc(50% - 16px);
+  }
+}
+
+/* Fix hamburger toggle positioning on mobile */
+@media (max-width: 768px) {
+  .hamburger-toggle {
+    display: block;
+    position: relative;
+    z-index: 1002; /* Ensures icon sits above drawer background */
+    color: #0f172a;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  /* Pin close icon to the top right inside the open drawer */
+  .hamburger-toggle.active {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #0f172a;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #ffffff; /* Matches drawer background */
+    padding: 80px 24px 32px; /* Top padding keeps first item 'Home' below the close button */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+  }
+
+  .nav-links.mobile-open {
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Set footer container to full width stacked layout */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* Target the container holding Quick Links & Services or create a 2-column grid for them */
+  .footer-links-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Side-by-side 2 column layout */
+    gap: 20px;
+    width: 100%;
   }
 }

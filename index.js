@@ -422,3 +422,26 @@ function sendToWhatsApp(event) {
 
   window.open(whatsappUrl, '_blank');
 }
+
+function toggleMobileMenu() {
+  const navLinks = document.getElementById('nav-links');
+  const toggleBtn = document.getElementById('hamburger-toggle');
+  
+  navLinks.classList.toggle('mobile-open');
+  toggleBtn.classList.toggle('active');
+}
+
+function handleMobileNav(page, event) {
+  // Call your existing navigateTo function
+  if (typeof navigateTo === 'function') {
+    navigateTo(page, event);
+  }
+
+  // Auto-close mobile drawer when a link is clicked
+  const navLinks = document.getElementById('nav-links');
+  const toggleBtn = document.getElementById('hamburger-toggle');
+  if (navLinks.classList.contains('mobile-open')) {
+    navLinks.classList.remove('mobile-open');
+    toggleBtn.classList.remove('active');
+  }
+}

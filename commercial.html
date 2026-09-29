@@ -29,36 +29,40 @@
             <span><i class="fa-solid fa-envelope"></i> info@sustainablegate.ae</span>
         </div>
         <div class="top-hours">
-            <i class="fa-regular fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM
+            <i class="fa-regular fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM
         </div>
     </div>
 
     <!-- Header / Navigation -->
-    <header>
-        <nav class="navbar">
-            <a class="logo-container" href="index.html">
-                <div class="logo-icon-card">
-                    <img src="logo.jpg" alt="Sustainable Gate Logo" class="card-logo-img">
-                </div>
-                <div class="logo-text">
-                    <span class="font-oswald logo-title">SUSTAINABLE GATE</span>
-                    <span class="font-oswald logo-subtitle">ELECTRO MECHANICAL WORKS</span>
-                </div>
-            </a>
+  <header>
+    <nav class="navbar">
+      <a class="logo-container" href="index.html">
+        <div class="logo-icon-card">
+          <img src="logo.jpg" alt="Sustainable Gate Logo" class="card-logo-img">
+        </div>
+        <div class="logo-text">
+          <span class="font-oswald logo-title">SUSTAINABLE GATE</span>
+          <span class="font-oswald logo-subtitle">ELECTRO MECHANICAL WORKS</span>
+        </div>
+      </a>
 
-            <ul class="nav-links">
-                <li><a id="nav-home" class="active" onclick="navigateTo('home', event)">Home</a></li>
-                <li><a id="nav-services" onclick="navigateTo('services', event)">Services</a></li>
-                <li><a id="nav-about" onclick="navigateTo('about', event)">About Us</a></li>
-                <li><a id="nav-projects" onclick="navigateTo('projects', event)">Projects</a></li>
-                <li><a id="nav-contact" onclick="navigateTo('contact', event)">Contact</a></li>
-            </ul>
+      <!-- Hamburger Toggle Button (Mobile View) -->
+      <button class="hamburger-toggle" id="hamburger-toggle" aria-label="Toggle Navigation Menu"
+        onclick="toggleMobileMenu()">
+        <i class="fa-solid fa-bars icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </button>
 
-            <button class="btn btn-primary" onclick="navigateTo('contact')">
-                <i class="fa-solid fa-paper-plane"></i> Get A Quote
-            </button>
-        </nav>
-    </header>
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a id="nav-home" href="#home" class="active" onclick="handleMobileNav('home', event)">Home</a></li>
+        <li><a id="nav-services" href="#services" onclick="handleMobileNav('services', event)">Services</a></li>
+        <li><a id="nav-about" href="#about" onclick="handleMobileNav('about', event)">About Us</a></li>
+        <li><a id="nav-projects" href="#projects" onclick="handleMobileNav('projects', event)">Projects</a></li>
+        <li><a id="nav-contact" href="#contact" onclick="handleMobileNav('contact', event)">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <div id="page-commercial" class="page active">
         <!-- Service Hero Banner -->
@@ -229,9 +233,9 @@
         </section>
     </div>
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-about">
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
         <a class="logo-container" href="index.html"
           style="width: fit-content; background-color: whitesmoke; padding-right: 4px; margin-bottom: 8px;">
           <div class="logo-icon-card">
@@ -244,46 +248,63 @@
         </a>
         <p>Sustainable Gate Electromechanical Works LLC is a premier provider of MEP, fit-out, civil, and maintenance
           services committed to quality execution across the UAE.</p>
+
+        <!-- Social Media & Google Maps Links -->
+        <div class="footer-social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn facebook"
+            title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn instagram"
+            title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://maps.app.goo.gl/SVdFhmBs4s1AqTMv5" target="_blank" rel="noopener noreferrer"
+            class="social-btn location" title="Our Location">
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </div>
       </div>
 
-            <div>
-                <h4 class="footer-title">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a onclick="navigateTo('home')" style="cursor: pointer;">Home</a></li>
-                    <li><a onclick="navigateTo('services')" style="cursor: pointer;">All Services</a></li>
-                    <li><a onclick="navigateTo('about')" style="cursor: pointer;">About Company</a></li>
-                    <li><a onclick="navigateTo('projects')" style="cursor: pointer;">Completed Projects</a></li>
-                    <li><a onclick="navigateTo('contact')" style="cursor: pointer;">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="footer-title">Services</h4>
-                <ul class="footer-links">
-                    <li><a href="./tender.html" style="cursor: pointer;">Tender</a></li>
-                    <li><a href="./design.html" style="cursor: pointer;">Design</a></li>
-                    <li><a href="./construction.html" style="cursor: pointer;">Construction</a></li>
-                    <li><a href="./maintenance.html" style="cursor: pointer;">Maintenance</a></li>
-                    <li><a href="./commercial.html" style="cursor: pointer;">Commercial</a></li>
-                    <li><a href="./electrical.html" style="cursor: pointer;">Electrical</a></li>
-                    <li><a href="./plumbing.html" style="cursor: pointer;">Plumbing</a></li>
-                    <li><a href="./low-current.html" style="cursor: pointer;">Low Current</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="footer-title">Compliance & Quality</h4>
-                <p style="font-size: 0.85rem; line-height: 1.6;">Registered & Licensed Electromechanical Works Operator
-                    under
-                    UAE Municipality Standards.</p>
-            </div>
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a onclick="navigateTo('home')" style="cursor: pointer;">Home</a></li>
+            <li><a onclick="navigateTo('services')" style="cursor: pointer;">All Services</a></li>
+            <li><a onclick="navigateTo('about')" style="cursor: pointer;">About Company</a></li>
+            <li><a onclick="navigateTo('projects')" style="cursor: pointer;">Completed Projects</a></li>
+            <li><a onclick="navigateTo('contact')" style="cursor: pointer;">Contact Us</a></li>
+          </ul>
         </div>
 
-        <div class="footer-bottom">
-            <div>&copy; 2026 Sustainable Gate Electromechanical Works LLC. All rights reserved.</div>
-            <div>Privacy Policy | Terms of Service</div>
+        <div class="footer-col">
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="./tender.html" style="cursor: pointer;">Tender</a></li>
+            <li><a href="./design.html" style="cursor: pointer;">Design</a></li>
+            <li><a href="./construction.html" style="cursor: pointer;">Construction</a></li>
+            <li><a href="./maintenance.html" style="cursor: pointer;">Maintenance</a></li>
+            <li><a href="./commercial.html" style="cursor: pointer;">Commercial</a></li>
+            <li><a href="./electrical.html" style="cursor: pointer;">Electrical</a></li>
+            <li><a href="./plumbing.html" style="cursor: pointer;">Plumbing</a></li>
+            <li><a href="./low-current.html" style="cursor: pointer;">Low Current</a></li>
+          </ul>
         </div>
-    </footer>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Compliance & Quality</h4>
+        <p style="font-size: 0.85rem; line-height: 1.6;">Registered & Licensed Electromechanical Works Operator under
+          UAE Municipality Standards.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Sustainable Gate Electromechanical Works LLC. All rights reserved.</div>
+      <div>Privacy Policy | Terms of Service</div>
+    </div>
+  </footer>
 
 </body>
 
