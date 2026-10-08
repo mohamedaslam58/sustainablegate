@@ -445,3 +445,43 @@ function handleMobileNav(page, event) {
     toggleBtn.classList.remove('active');
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.project-carousel').forEach((carousel) => {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.dot');
+    const prevBtn = carousel.querySelector('.prev-btn');
+    const nextBtn = carousel.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+
+      slides[currentIndex].classList.remove('active');
+      dots[currentIndex].classList.remove('active');
+
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+
+      currentIndex = index;
+    }
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showSlide(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showSlide(currentIndex + 1);
+    });
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showSlide(idx);
+      });
+    });
+  });
+});
