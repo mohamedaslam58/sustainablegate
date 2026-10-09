@@ -1158,7 +1158,7 @@ ul, ol {
   color: #FFFFFF;
 }
 
-.footer-social-links .social-btn.facebook:hover {
+.footer-social-links .social-btn.linkedin:hover {
   background-color: #1877F2;
   border-color: #1877F2;
   box-shadow: 0 4px 12px rgba(24, 119, 242, 0.35);
@@ -1472,6 +1472,7 @@ ul, ol {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+    margin-bottom: 0;
   }
 
   /* Force side-by-side input fields (e.g., Full Name + Phone) to stack */
@@ -1560,6 +1561,7 @@ ul, ol {
   .client-logo-card {
     flex: 0 0 calc(33.333% - 22px);
     min-width: calc(33.333% - 22px);
+    height: 70px;
   }
 }
 
