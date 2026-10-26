@@ -227,7 +227,7 @@ header {
 .hero {
   position: relative;
   background: linear-gradient(135deg, rgba(15, 56, 44, 0.92), rgba(30, 41, 59, 0.88)),
-    url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    url('	https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
   color: white;
   padding: 100px 5% 120px;
   text-align: left;
