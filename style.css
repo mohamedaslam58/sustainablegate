@@ -39,7 +39,7 @@
 }
 
 body {
-  background-color: var(--light-bg);
+  background-color: #f7f4ee;
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
@@ -95,7 +95,7 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
   text-decoration: none;
 }
 
@@ -226,11 +226,38 @@ header {
 /* Hero Section */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, rgba(15, 56, 44, 0.92), rgba(30, 41, 59, 0.88)),
-    url('	https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+  /* background: linear-gradient(135deg, rgba(15, 56, 44, 0.92), rgba(30, 41, 59, 0.88)),
+    url('	https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80') center/cover no-repeat; */
   color: white;
   padding: 100px 5% 120px;
   text-align: left;
+  overflow: hidden;
+}
+
+/* Position the video to fill the background */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(0.85);
+}
+
+/* Semi-transparent tint overlay for text readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15, 56, 44, 0.92), rgba(30, 41, 59, 0.88));
+  z-index: 1;
 }
 
 .hero-container {
@@ -540,8 +567,8 @@ header {
 
 /* Footer */
 footer {
-  background-color: var(--secondary);
-  color: #94A3B8;
+  background-color: var(--surface);
+  color: #1E293B;
   padding: 70px 5% 20px;
 }
 
@@ -571,7 +598,7 @@ footer {
 }
 
 .footer-title {
-  color: white;
+  color: #1E293B;
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 20px;
@@ -586,7 +613,7 @@ footer {
 }
 
 .footer-links a {
-  color: #94A3B8;
+  color: #1E293B;
   text-decoration: none;
   transition: var(--transition);
   font-size: 0.9rem;
@@ -600,7 +627,7 @@ footer {
   max-width: 1400px;
   margin: 0 auto;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #dbdbdb;
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
@@ -645,19 +672,9 @@ footer {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   /* Reduced gap between image and text */
   text-decoration: none;
-}
-
-.logo-icon-card {
-  width: 60px;
-  /* Reduced from 50px */
-  height: 42px;
-  /* Reduced from 50px */
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .card-logo-img {
@@ -673,7 +690,7 @@ footer {
 
 .logo-title {
   font-family: 'Impact', 'Arial Black', 'Outfit', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   /* Reduced from 1.35rem */
   font-weight: bolder;
   color: var(--card-navy);
@@ -684,11 +701,11 @@ footer {
 
 .logo-subtitle {
   font-family: 'Impact', 'Arial Black', 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   /* Reduced from 0.72rem */
   font-weight: 700;
   color: var(--card-grey);
-  letter-spacing: 1.2px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
   margin-top: 1px;
   text-align: center;
@@ -735,7 +752,7 @@ footer {
 
 /* Happy Clients Section */
 .clients-section {
-  background-color: #f8fafc;
+  background-color: #f7f4ee;
 }
 
 .clients-slider-wrapper {
@@ -1334,6 +1351,21 @@ ul, ol {
   transform: scale(1.25);
 }
 
+.logo-icon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 6px;
+  height: 60px;
+}
+
+.vector-logo-svg {
+  width: 110px; /* Adjust width to fit your navbar or layout perfectly */
+  height: auto;
+  display: block;
+}
+
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .footer-container {
@@ -1382,7 +1414,7 @@ ul, ol {
   .logo-container {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     flex: 1;
     min-width: 0;
     /* Prevents overflow */

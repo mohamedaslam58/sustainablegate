@@ -22,16 +22,16 @@
 <body>
 
   <!-- Top Utility Bar -->
-  <!-- <div class="top-bar">
+  <div class="top-bar">
     <div class="top-info">
       <span><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
       <span><i class="fa-solid fa-phone"></i> +971 5 893 58287</span>
       <span><i class="fa-solid fa-envelope"></i> info@sustainablegate.ae</span>
     </div>
     <div class="top-hours">
-      <i class="fa-regular fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM
+      <i class="fa-regular fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM
     </div>
-  </div> -->
+  </div>
 
   <!-- Header / Navigation -->
   <header>
@@ -67,7 +67,15 @@
   <!-- PAGE 1: HOME PAGE -->
   <div id="page-home" class="page active">
     <section class="hero">
-      <div class="hero-container">
+      <!-- Background Video Element -->
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="videos/mep_1.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+      <!-- Dark Gradient Tint Overlay -->
+      <div class="hero-overlay"></div>
+      <div class="hero-container" style="position: relative; z-index: 2;">
         <div>
           <h1 class="hero-title"><span>Electromechanical</span> & Building Solutions</h1>
           <p class="hero-subtitle">Sustainable MEP contracting, electrical, plumbing, architectural and HVAC finishing works for residential and commercial projects across the UAE.</p>
@@ -245,7 +253,7 @@
 
         <div class="clients-slider-wrapper">
           <div id="clients-carousel" class="clients-carousel">
-            <div class="client-logo-card">
+            <!-- <div class="client-logo-card">
               <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 90'><path d='M15 45 L45 15 L55 45 L35 75 Z' fill='%23D94125'/><path d='M45 15 L75 45 L35 75 L55 45 Z' fill='%23666666'/><circle cx='45' cy='45' r='7' fill='%23D94125'/><text x='88' y='38' font-family='sans-serif' font-weight='700' font-size='18' fill='%23D94125'>يونيفورس للمقاولات ش.ذ.م.م</text><text x='88' y='65' font-family='sans-serif' font-weight='800' font-size='22' fill='%23D94125'>Uniforce <tspan font-weight='400' font-size='15' fill='%23666666'>Contracting L.L.C.</tspan></text></svg>" alt="Uniforce Contracting LLC" />
             </div>
             <div class="client-logo-card">
@@ -268,6 +276,48 @@
             </div>
             <div class="client-logo-card">
               <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 90'><path d='M10 80 L25 30 L40 80 Z M30 80 L45 15 L60 80 Z M50 80 L62 35 L75 80 Z' fill='%230072CE'/><path d='M22 80 L35 32 L48 80 Z' fill='%23708090' opacity='0.7'/><text x='85' y='32' font-family='sans-serif' font-weight='700' font-size='16' fill='%230072CE'>كنز الارض لمقاولات البناء ش.ذ.م.م</text><text x='85' y='58' font-family='sans-serif' font-weight='900' font-size='22' fill='%230072CE'>KANZ ALARD</text><text x='85' y='76' font-family='sans-serif' font-weight='700' font-size='14' fill='%23555555'>BUILDING CONT. L.L.C</text></svg>" alt="Kanz Alard Building Cont. LLC" />
+            </div> -->
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CLIENT_1. WESTAR PROPERTIES.png" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CLIENT_2. ELLINGTON.png" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CLIENT_3. cropped-GreenYard-Logo-1.png" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CLIENT_4. LAYA DEVELOPERS.jpg" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CLIENT_5. DMCC.webp" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CLIENT_6. RELIANCE.png" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CONSULTANT_1. AL MISHKAT.jpg" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CONSULTANT_2. OAK LINE.png" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CONSULTANT_3. ICONIC.PNG" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CONSULTANT_4. RIDGE.png" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CONSULTANT_5. PROLINE.webp" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CONSULTANT_6. CUBIC.jpg" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CONSULTANT_7. AL AMIR ENGINEERING.png" alt="Kanz Alard Building Cont. LLC" />
+            </div>
+            <div class="client-logo-card">
+              <img src="clients/CLIENT LOGOS_CONTRACTOR_MAZI.png" alt="Kanz Alard Building Cont. LLC" />
             </div>
           </div>
         </div>
@@ -398,13 +448,17 @@
           <!-- <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px;">Reliable Electromechanical Partners
             in the UAE</h3> -->
           <p style="color: var(--text-muted); margin-bottom: 15px;">
-            <strong>Sustainable Gate Electromechanical Works LLC</strong> was established with a singular focus:
-            delivering top-tier electromechanical, fitting, and civil maintenance solutions with an unwavering
-            commitment to quality and sustainability.
+            <strong>Sustainable Gate Electromechanical Works LLC</strong> was established in 2022 in the United Arab Emirates with
+            a singular, uncompromising vision: delivering top-tier electromechanical, fit-out, and civil maintenance solutions
+            with an unwavering commitment to quality and sustainability. We combine advanced technical precision with eco-friendly
+            engineering practices to transform architectural blueprints into enduring, high-performance environments.
           </p>
           <p style="color: var(--text-muted); margin-bottom: 20px;">
-            We operate in strict accordance with UAE regulatory guidelines, offering comprehensive integrated technical
-            services for commercial towers, residential villas, industrial plants, and retail spaces.
+            Operating in strict accordance with UAE regulatory guidelines—including DEWA, DM, and DCD standards—our
+            multidisciplinary teams manage complex projects with rigorous quality control, safety protocols, and punctuality. Our
+            comprehensive technical services span across private ultra-luxury villas, industrial projects, and dynamic commercial
+            and retail spaces. At Sustainable Gate, we don't just
+            build spaces; we engineer high-performance solutions that elevate and enhance the modern lifestyle.
           </p>
           <!-- <div style="display: flex; gap: 30px;">
             <div>
@@ -1138,7 +1192,7 @@
     <div class="footer-container">
       <div class="footer-about">
         <a class="logo-container" href="index.html"
-          style="width: fit-content; background-color: whitesmoke; padding-right: 4px; margin-bottom: 8px;">
+          style="width: fit-content; background-color: #fff; padding-right: 4px; margin-bottom: 8px;">
           <div class="logo-icon-card">
             <img src="logo.jpg" alt="Sustainable Gate Logo" class="card-logo-img">
           </div>
