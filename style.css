@@ -1422,8 +1422,8 @@ ul, ol {
 
   /* Logo Image alignment fix */
   .logo-icon-card {
-    width: 32px;
-    height: 32px;
+    width: 60px;
+    height: 60px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -1601,6 +1601,10 @@ ul, ol {
   .client-logo-card {
     flex: 0 0 calc(50% - 16px);
     min-width: calc(50% - 16px);
+  }
+
+  .top-bar span:has(> .fa-envelope) {
+    display: none !important;
   }
 }
 

@@ -446,6 +446,20 @@ function handleMobileNav(page, event) {
   }
 }
 
+// Close mobile menu when clicking anywhere outside of the nav-links and hamburger button
+document.addEventListener('click', (event) => {
+  const navLinks = document.getElementById('nav-links');
+  const toggleBtn = document.getElementById('hamburger-toggle');
+
+  if (navLinks && navLinks.classList.contains('mobile-open')) {
+    // If the click happened outside both the menu list and the toggle button
+    if (!navLinks.contains(event.target) && !toggleBtn.contains(event.target)) {
+      navLinks.classList.remove('mobile-open');
+      toggleBtn.classList.remove('active');
+    }
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.project-carousel').forEach((carousel) => {
     const slides = carousel.querySelectorAll('.carousel-slide');
