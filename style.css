@@ -693,7 +693,7 @@ footer {
   font-size: 1.35rem;
   /* Reduced from 1.35rem */
   font-weight: bolder;
-  color: var(--card-navy);
+  color: #262262;
   letter-spacing: 0.8px;
   line-height: 1.1;
   text-transform: uppercase;
@@ -704,7 +704,7 @@ footer {
   font-size: 0.68rem;
   /* Reduced from 0.72rem */
   font-weight: 700;
-  color: var(--card-grey);
+  color: #000000;
   letter-spacing: 1.6px;
   text-transform: uppercase;
   margin-top: 1px;
