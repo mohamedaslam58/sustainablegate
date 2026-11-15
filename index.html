@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sustainable Gate Electromechanical Works LLC</title>
+  <title>Sustainable Gate Electromechanical Works L.L.C</title>
 
   <!-- Square Favicon for Browsers -->
   <link rel="icon" type="image/png" sizes="32x32" href="logo.jpg">
@@ -25,7 +25,7 @@
   <div class="top-bar">
     <div class="top-info">
       <span><i class="fa-solid fa-envelope"></i> info@sustainablegate.ae</span>
-      <span><i class="fa-solid fa-phone"></i> +971 58 935 8287</span>
+      <span><i class="fa-solid fa-phone"></i> 04-2884127</span>
       <span><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
     </div>
     <div class="top-hours">
@@ -56,8 +56,8 @@
       <!-- Navigation Links -->
       <ul class="nav-links" id="nav-links">
         <li><a id="nav-home" href="#home" class="active" onclick="handleMobileNav('home', event)">Home</a></li>
-        <li><a id="nav-services" href="#services" onclick="handleMobileNav('services', event)">Services</a></li>
         <li><a id="nav-about" href="#about" onclick="handleMobileNav('about', event)">About Us</a></li>
+        <li><a id="nav-services" href="#services" onclick="handleMobileNav('services', event)">Services</a></li>
         <li><a id="nav-projects" href="#projects" onclick="handleMobileNav('projects', event)">Projects</a></li>
         <li><a id="nav-contact" href="#contact" onclick="handleMobileNav('contact', event)">Contact</a></li>
       </ul>
@@ -78,12 +78,12 @@
       <div class="hero-container" style="position: relative; z-index: 2;">
         <div>
           <h1 class="hero-title"><span>Electromechanical</span> Solutions</h1>
-          <p class="hero-subtitle">Our Vision is to be the leading innovative, competitive, and excellent MEP contractor in Dubai and UAE.</p>
+          <p class="hero-subtitle">Partnering with Sustainable Gate means gaining access to comprehensive, end-to-end engineering solutions, supported by a multidisciplinary team of highly skilled professionals with extensive technical expertise, in-depth local market knowledge, and proven industry experience.</p>
           <div class="hero-cta">
             <button class="btn btn-accent" onclick="navigateTo('services')">Explore Services</button>
             <button class="btn btn-primary"
               style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);"
-              onclick="navigateTo('contact')">Consult Our Engineers</button>
+              onclick="navigateTo('contact')">Consult Our Team</button>
           </div>
         </div>
         <div class="hero-badge-container">
@@ -102,7 +102,7 @@
               <i class="fa-solid fa-bolt"></i>
             </div>
             <div class="badge-content">
-              <h4>24/7 Rapid Maintenance</h4>
+              <h4>24/7 Rapid Service & Maintenance</h4>
               <p>On-demand emergency electromechanical repairs.</p>
             </div>
           </div>
@@ -173,7 +173,7 @@
         <a href="./low-current.html" class="service-card-link">
           <div class="service-card">
             <div class="service-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
-            <h3>Low Current</h3>
+            <h3>ICT</h3>
             <p>Installation and support for CCTV, access control, structured cabling, networking, fire alarm, and other
               low-current systems.</p><span class="learn-more">Read More <i class="fa-solid fa-arrow-right"></i></span>
           </div>
@@ -227,7 +227,7 @@
               <option>Commercial</option>
               <option>Electrical</option>
               <option>Plumbing</option>
-              <option>Low Current</option>
+              <option>ICT</option>
             </select>
           </div>
           <div class="form-group">
@@ -242,88 +242,252 @@
       </div>
     </section>
 
-    <!-- Happy Clients / Client Logos Section -->
-    <section class="section clients-section" style="padding-top: 0;">
+    <!-- Trusted Partners Showcase -->
+    <section class="section partners-section" style="padding-top: 0;">
+      <style>
+        .partners-section {
+          position: relative;
+        }
+
+        .partners-section .section-header {
+          margin-bottom: 30px;
+        }
+
+        .partners-section .section-header p {
+          max-width: 760px;
+          margin: 0 auto;
+        }
+
+        .partner-groups {
+          display: grid;
+          gap: 28px;
+        }
+
+        .partner-group {
+          background: rgba(255, 255, 255, 0.7);
+          border: 1px solid var(--border);
+          border-radius: 18px;
+          padding: 20px 18px 18px;
+          box-shadow: var(--shadow);
+        }
+
+        .partner-group-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          margin-bottom: 16px;
+          padding: 0 10px;
+        }
+
+        .partner-group-header span {
+          font-size: 0.8rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--primary);
+          font-weight: 800;
+        }
+
+        .partner-group-header::after {
+          content: "";
+          flex: 1;
+          height: 1px;
+          background: linear-gradient(90deg, rgba(15, 56, 44, 0.4), transparent);
+        }
+
+        .partner-band {
+          position: relative;
+          overflow: hidden;
+          mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+        }
+
+        .partner-track {
+          display: flex;
+          width: max-content;
+          gap: 18px;
+          animation: partner-scroll 40s linear infinite;
+          animation-play-state: paused;
+        }
+
+        .partners-section.is-visible .partner-track {
+          animation-play-state: running;
+        }
+
+        .partners-section.is-visible .partner-band:hover .partner-track {
+          animation-play-state: paused;
+        }
+
+        .partner-card {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 14px;
+          min-width: 180px;
+          height: 96px;
+          padding: 14px 16px;
+          box-shadow: 0 10px 20px rgba(15, 56, 44, 0.04);
+          transition: var(--transition);
+        }
+
+        .partner-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 16px 24px rgba(15, 56, 44, 0.08);
+        }
+
+        .partner-card img {
+          max-width: 100%;
+          max-height: 72px;
+          object-fit: contain;
+          filter: saturate(0.9) contrast(1.02);
+        }
+
+        .partner-card--text {
+          min-width: 220px;
+          padding: 18px 20px;
+          text-align: center;
+          color: var(--primary);
+          font-weight: 800;
+          letter-spacing: 0.02em;
+          font-size: 0.94rem;
+          line-height: 1.3;
+        }
+
+        @keyframes partner-scroll {
+          from { transform: translateX(0); }
+          to { transform: translateX(calc(-50% - 9px)); }
+        }
+
+        @media (max-width: 768px) {
+          .partner-group {
+            padding: 16px 12px 14px;
+          }
+
+          .partner-card {
+            min-width: 150px;
+            height: 82px;
+          }
+
+          .partner-card--text {
+            min-width: 180px;
+            font-size: 0.82rem;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .partner-track {
+            animation: none;
+            transform: none;
+            width: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          .partner-band {
+            overflow: visible;
+            mask-image: none;
+            -webkit-mask-image: none;
+          }
+        }
+      </style>
+
       <div class="container">
         <div class="section-header text-center">
           <span class="tagline">Our Trusted Partners</span>
-          <h2 class="section-title">Happy Clients</h2>
+          <h2 class="section-title">A Network Built on Trust</h2>
           <p>Delivering excellence to leading commercial, residential, and industrial organizations across the UAE.</p>
         </div>
 
-        <div class="clients-slider-wrapper">
-          <div id="clients-carousel" class="clients-carousel">
-            <!-- <div class="client-logo-card">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 90'><path d='M15 45 L45 15 L55 45 L35 75 Z' fill='%23D94125'/><path d='M45 15 L75 45 L35 75 L55 45 Z' fill='%23666666'/><circle cx='45' cy='45' r='7' fill='%23D94125'/><text x='88' y='38' font-family='sans-serif' font-weight='700' font-size='18' fill='%23D94125'>يونيفورس للمقاولات ش.ذ.م.م</text><text x='88' y='65' font-family='sans-serif' font-weight='800' font-size='22' fill='%23D94125'>Uniforce <tspan font-weight='400' font-size='15' fill='%23666666'>Contracting L.L.C.</tspan></text></svg>" alt="Uniforce Contracting LLC" />
+        <div class="partner-groups">
+          <div class="partner-group">
+            <div class="partner-group-header"><span>Clients</span></div>
+            <div class="partner-band" aria-label="Happy clients carousel">
+              <div class="partner-track">
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_1. LAYA DEVELOPERS.jpg" alt="Westar Properties" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_2. WESTAR PROPERTIES.png" alt="Ellington" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_3. ELLINGTON.png" alt="GreenYard" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_4. DMCC.webp" alt="Laya Developers" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_5. cropped-GreenYard-Logo-1.png" alt="DMCC" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_6. RELIANCE.png" alt="Reliance" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_1. LAYA DEVELOPERS.jpg" alt="Westar Properties" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_2. WESTAR PROPERTIES.png" alt="Ellington" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_3. ELLINGTON.png" alt="GreenYard" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_4. DMCC.webp" alt="Laya Developers" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_5. cropped-GreenYard-Logo-1.png" alt="DMCC" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CLIENT_6. RELIANCE.png" alt="Reliance" /></div>
+                
+              </div>
             </div>
-            <div class="client-logo-card">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 90'><g fill='%23B5935B'><rect x='10' y='32' width='40' height='7' rx='2'/><rect x='15' y='42' width='35' height='7' rx='2'/><rect x='20' y='52' width='30' height='7' rx='2'/><rect x='25' y='62' width='25' height='7' rx='2'/></g><text x='62' y='66' font-family='serif' font-weight='900' font-size='48' fill='%231A2B4C'>G</text><text x='110' y='34' font-family='serif' font-weight='700' font-size='18' fill='%231A2B4C'>الجناح الذهبي للمقاولات ش.ذ.م.م.</text><text x='110' y='60' font-family='serif' font-weight='700' font-size='22' fill='%231A2B4C'>OLDEN WING</text><text x='110' y='76' font-family='sans-serif' font-weight='600' font-size='12' fill='%231A2B4C' letter-spacing='3'>CONTRACTING LLC</text></svg>" alt="Golden Wing Contracting LLC" />
+          </div>
+
+          <div class="partner-group">
+            <div class="partner-group-header"><span>Consultants</span></div>
+            <div class="partner-band" aria-label="Consultants carousel">
+              <div class="partner-track">
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_1. AL MISHKAT.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_2. OAK LINE.png" alt="Oak Line" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_3. ICONIC.PNG" alt="Iconic" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_4. RIDGE.png" alt="Ridge" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_5. PROLINE.webp" alt="Proline" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_6. CUBIC.jpg" alt="Cubic" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_7. AL AMIR ENGINEERING.png" alt="Al Amir Engineering" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_1. AL MISHKAT.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_2. OAK LINE.png" alt="Oak Line" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_3. ICONIC.PNG" alt="Iconic" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_4. RIDGE.png" alt="Ridge" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_5. PROLINE.webp" alt="Proline" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_6. CUBIC.jpg" alt="Cubic" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONSULTANT_7. AL AMIR ENGINEERING.png" alt="Al Amir Engineering" /></div>
+              </div>
             </div>
-            <div class="client-logo-card">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 80'><g transform='translate(10,0)'><rect x='30' y='10' width='35' height='35' transform='rotate(45 47 27)' fill='%23800000'/><rect x='65' y='10' width='35' height='35' transform='rotate(45 82 27)' fill='none' stroke='%23222222' stroke-width='2'/><text x='38' y='32' font-family='serif' font-weight='700' font-size='16' fill='%23FFFFFF'>A</text><text x='54' y='32' font-family='serif' font-weight='700' font-size='16' fill='%23FFFFFF'>B</text><text x='70' y='32' font-family='serif' font-weight='700' font-size='16' fill='%23800000'>C</text></g><text x='10' y='68' font-family='serif' font-weight='700' font-size='15' fill='%23800000'>ACCORD BUILDING CONTRACTING LLC</text></svg>" alt="Accord Building Contracting LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 100'><path d='M20 20 L30 20 L30 65 L20 65 Z M32 10 L42 10 L42 65 L32 65 Z M44 25 L54 25 L54 65 L44 65 Z' fill='%233B2A82'/><path d='M15 67 L60 67 L37 77 Z' fill='%23E65100'/><text x='75' y='32' font-family='sans-serif' font-weight='700' font-size='18' fill='%233B2A82'>الارض الفضية للمقاولات ش.ذ.م.م</text><text x='75' y='56' font-family='serif' font-weight='700' font-size='19' fill='%233B2A82'>Silver Land Contracting <tspan font-size='12'>L.L.C.</tspan></text><line x1='75' y1='62' x2='290' y2='62' stroke='%23E65100' stroke-width='2'/></svg>" alt="Silver Land Contracting LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 80'><path d='M15 30 L50 18 L65 30 M15 30 L15 60 L65 60 L65 30' fill='none' stroke='%23C8382B' stroke-width='3'/><text x='25' y='52' font-family='sans-serif' font-weight='900' font-size='22' fill='%23C8382B'>SNC</text><text x='78' y='32' font-family='sans-serif' font-size='14' fill='%23333333'>الشفار الوطنية للمقاولات (ذ.م.م)</text><text x='78' y='52' font-family='serif' font-style='italic' font-weight='700' font-size='14' fill='%23C8382B'>Al Shafar National Contracting <tspan font-size='10' font-style='normal'>(L.L.C)</tspan></text></svg>" alt="Al Shafar National Contracting LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 70'><text x='5' y='35' font-family='sans-serif' font-weight='900' font-size='20' fill='%231034A6'>Bin Malek</text><text x='5' y='52' font-family='sans-serif' font-weight='700' font-size='12' fill='%23222222'>Contracting L.L.C.</text><path d='M120 15 L130 15 L130 55 L120 55 Z' fill='%231034A6'/><path d='M135 15 C150 15, 150 35, 135 35 C153 35, 153 55, 135 55' fill='none' stroke='%231034A6' stroke-width='5'/><text x='160' y='20' font-family='sans-serif' font-size='10' fill='%23888888'>ali abdulla</text><text x='160' y='38' font-family='sans-serif' font-weight='900' font-size='16' fill='%231034A6'>Bin Malek</text><text x='160' y='52' font-family='sans-serif' font-weight='700' font-size='11' fill='%23222222'>Building Contracting</text></svg>" alt="Bin Malek Contracting LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 80'><path d='M15 15 L32 70 L48 35 L64 70 L64 15' fill='%238E7342'/><path d='M40 15 L64 15 L64 70 L48 35 Z' fill='%234B6B75'/><text x='80' y='45' font-family='sans-serif' font-weight='300' font-size='34' fill='%23222222' letter-spacing='2'>MA<tspan fill='%238E7342' font-weight='400'>ZI</tspan></text><text x='82' y='65' font-family='sans-serif' font-weight='400' font-size='11' fill='%23444444' letter-spacing='3'>CONTRACTING</text></svg>" alt="Mazi Contracting LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 90'><path d='M10 80 L25 30 L40 80 Z M30 80 L45 15 L60 80 Z M50 80 L62 35 L75 80 Z' fill='%230072CE'/><path d='M22 80 L35 32 L48 80 Z' fill='%23708090' opacity='0.7'/><text x='85' y='32' font-family='sans-serif' font-weight='700' font-size='16' fill='%230072CE'>كنز الارض لمقاولات البناء ش.ذ.م.م</text><text x='85' y='58' font-family='sans-serif' font-weight='900' font-size='22' fill='%230072CE'>KANZ ALARD</text><text x='85' y='76' font-family='sans-serif' font-weight='700' font-size='14' fill='%23555555'>BUILDING CONT. L.L.C</text></svg>" alt="Kanz Alard Building Cont. LLC" />
-            </div> -->
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CLIENT_1. WESTAR PROPERTIES.png" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CLIENT_2. ELLINGTON.png" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CLIENT_3. cropped-GreenYard-Logo-1.png" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CLIENT_4. LAYA DEVELOPERS.jpg" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CLIENT_5. DMCC.webp" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CLIENT_6. RELIANCE.png" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CONSULTANT_1. AL MISHKAT.jpg" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CONSULTANT_2. OAK LINE.png" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CONSULTANT_3. ICONIC.PNG" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CONSULTANT_4. RIDGE.png" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CONSULTANT_5. PROLINE.webp" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CONSULTANT_6. CUBIC.jpg" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CONSULTANT_7. AL AMIR ENGINEERING.png" alt="Kanz Alard Building Cont. LLC" />
-            </div>
-            <div class="client-logo-card">
-              <img src="clients/CLIENT LOGOS_CONTRACTOR_MAZI.png" alt="Kanz Alard Building Cont. LLC" />
+          </div>
+
+          <div class="partner-group">
+            <div class="partner-group-header"><span>Contractors</span></div>
+            <div class="partner-band" aria-label="Main contractors carousel">
+              <div class="partner-track">
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Golden-Wing.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Uniforce.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Al-Shafar.jpeg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Accord.jpeg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Bin-Malek.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Sky-hope.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_TGC.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Mazi.jpeg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Kanz.jpeg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Golden-Wing.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Uniforce.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Al-Shafar.jpeg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Accord.jpeg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Bin-Malek.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Sky-hope.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_TGC.jpg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Mazi.jpeg" alt="Al Mishkat" /></div>
+                <div class="partner-card"><img src="clients/CLIENT LOGOS_CONTRACTOR_Kanz.jpeg" alt="Al Mishkat" /></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
+
+  <script>
+    const partnersSection = document.querySelector('.partners-section');
+    if (partnersSection && 'IntersectionObserver' in window) {
+      const partnersObserver = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          partnersSection.classList.add('is-visible');
+          partnersObserver.disconnect();
+        }
+      });
+      partnersObserver.observe(partnersSection);
+    } else if (partnersSection) {
+      partnersSection.classList.add('is-visible');
+    }
+  </script>
 
   <!-- PAGE 2: SERVICES (DETAILED FULL CATALOG) -->
   <div id="page-services" class="page">
@@ -403,7 +567,7 @@
         <a href="low-current.html" class="service-card-link">
           <div class="service-card" data-category="technical">
             <div class="service-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
-            <h3>Low Current</h3>
+            <h3>ICT</h3>
             <p>Installation and support for CCTV, access control, structured cabling, networking, fire alarm, and other
               low-current systems.</p>
             <span class="learn-more">Read More <i class="fa-solid fa-arrow-right"></i></span>
@@ -448,7 +612,7 @@
           <!-- <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px;">Reliable Electromechanical Partners
             in the UAE</h3> -->
           <p style="color: var(--text-muted); margin-bottom: 15px;">
-            <strong>Sustainable Gate Electromechanical Works LLC</strong> was established in 2022 in the United Arab Emirates with
+            <strong>Sustainable Gate Electromechanical Works L.L.C</strong> was established in 2022 in the United Arab Emirates with
             a singular, uncompromising vision: delivering top-tier electromechanical, fit-out, and civil maintenance solutions
             with an unwavering commitment to quality and sustainability. We combine advanced technical precision with eco-friendly
             engineering practices to transform architectural blueprints into enduring, high-performance environments.
@@ -502,7 +666,7 @@
             <li><strong>Client:</strong> Heirs of Aqeel Abdulla Abdul Raheem Al Faheem</li>
             <li><strong>Consultant:</strong> Al Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Sky Hope Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
@@ -531,14 +695,14 @@
   </div>
 
   <div class="project-info">
-    <h3>Commercial Building (Al Muteena)</h3>
+    <h3>Commercial Building</h3>
     <p class="project-details"><strong>Details:</strong> G+3+R Commercial Building, Al Muteena - Dubai</p>
     <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical & Plumbing Works</p>
     <ul class="project-meta">
       <li><strong>Client:</strong> Heirs of Aqeel Abdulla Abdul Raheem Al Faheem</li>
       <li><strong>Consultant:</strong> Al Mishkat Engineering Consultants</li>
       <li><strong>Main Contractor:</strong> Sky Hope Contracting LLC</li>
-      <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+      <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
     </ul>
   </div>
 </div>
@@ -572,7 +736,7 @@
             <li><strong>Client:</strong> GHD Developments</li>
             <li><strong>Consultant:</strong> Federal Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Strong Walls Constructions LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
@@ -590,7 +754,7 @@
             <li><strong>Client:</strong> Hasabi Pvt. Real Estate Management LLC</li>
             <li><strong>Consultant:</strong> IEA Architectural & Design Services (MEP: Kayaan Engineering Consultants)</li>
             <li><strong>Main Contractor:</strong> Strong Walls Constructions LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
@@ -613,14 +777,14 @@
           </div>
         </div>
         <div class="project-info">
-          <h3>Private Villa (Wadi Al Shabak) - 2 Villas</h3>
-          <p class="project-details"><strong>Details:</strong> G+1+R Residential Private Villa, Dubai Hills - Dubai</p>
+          <h3>Private Villa - 2 Villas</h3>
+          <p class="project-details"><strong>Details:</strong> G+1+R Residential Private Villa, Wadi Al Shabak - Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical & Plumbing Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Abdulrahman Talib Khairullah Mujwal & Mr. Huzaifa Talib Khairullah Mujwal</li>
             <li><strong>Consultant:</strong> Iconic Engineering and Architectural Consultants</li>
             <li><strong>Main Contractor:</strong> Sky Hope Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
@@ -643,14 +807,14 @@
           </div>
         </div>
         <div class="project-info">
-          <h3>Private Villa (Dubai Hills)</h3>
+          <h3>Private Villa</h3>
           <p class="project-details"><strong>Details:</strong> B+G+1+R Residential Private Villa, Dubai Hills - Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical & Plumbing Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Yashar Ali Abdul Kader</li>
             <li><strong>Consultant:</strong> Oak Line Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Golden Wing Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
@@ -668,56 +832,56 @@
             <li><strong>Client:</strong> Mr. Abdulrahman Talib Khairullah Mujwal</li>
             <li><strong>Consultant:</strong> Iconic Engineering and Architectural Consultants</li>
             <li><strong>Main Contractor:</strong> Sky Hope Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
 
-      <!-- 7. Residential Building (Liwan-2) -->
-      <div class="project-card" data-category="residential" data-status="On Going">
+      <!-- 7. Residential Building -->
+      <div class="project-card" data-category="residential" data-status="On Completion">
         <div class="project-img" style="background-image: url('images/14(0).jpg');">
-          <span class="project-tag">On Going</span>
+          <span class="project-tag">On Completion</span>
         </div>
         <div class="project-info">
-          <h3>Residential Building (Liwan-2)</h3>
+          <h3>Residential Building</h3>
           <p class="project-details"><strong>Details:</strong> G+4+R Residential Building, Plot No. 643-9654, at Wadi Al Safa 02, Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical & Plumbing Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Rashid Mohammad Ali Mohammad Al Hajeri</li>
             <li><strong>Consultant:</strong> Al Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Uniforce Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
-      <!-- 8. Commercial/Residential Building (Karama) #1 -->
-      <div class="project-card" data-category="commercial" data-status="On Going">
+      <!-- 8. Commercial/Residential Building #1 -->
+      <div class="project-card" data-category="commercial" data-status="Completed">
         <div class="project-img" style="background-image: url('images/14.jpg');">
-          <span class="project-tag">On Going</span>
+          <span class="project-tag">Completed</span>
         </div>
         <div class="project-info">
-          <h3>Commercial/Residential Building (Karama)</h3>
+          <h3>Commercial/Residential Building</h3>
           <p class="project-details"><strong>Details:</strong> G+3+R Commercial & Residential Building, Plot No. 318-0794, at Karama, Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical & Plumbing Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Ahmad Sultan Khalifa Belrasheed Al Suwaidi & Ahmed Mohammed Ahmed Faraj Al Mehairbi</li>
             <li><strong>Consultant:</strong> Al Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Uniforce Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
       <!-- 9. Private Villa (Dubai Hills) #2 -->
-      <div class="project-card" data-category="villa" data-status="On Going">
+      <div class="project-card" data-category="villa" data-status="Completed">
         <div class="project-carousel">
           <div class="carousel-track">
             <div class="carousel-slide active" style="background-image: url('images/15.jpg');"></div>
             <div class="carousel-slide" style="background-image: url('images/16.jpg');"></div>
             <div class="carousel-slide" style="background-image: url('images/17.jpg');"></div>
           </div>
-          <span class="project-tag">On Going</span>
+          <span class="project-tag">Completed</span>
           <button class="carousel-btn prev-btn" aria-label="Previous Image">&#10094;</button>
           <button class="carousel-btn next-btn" aria-label="Next Image">&#10095;</button>
           <div class="carousel-dots">
@@ -727,20 +891,20 @@
           </div>
         </div>
         <div class="project-info">
-          <h3>Private Villa (Dubai Hills)</h3>
+          <h3>Private Villa</h3>
           <p class="project-details"><strong>Details:</strong> B+G+1+R Residential Private Villa, Dubai Hills - Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical & Plumbing Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> M/s. Westar Properties</li>
             <li><strong>Consultant:</strong> Ridge Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Golden Wing Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
       <!-- 10. Private Villa (Umm Suqeim) -->
-      <div class="project-card" data-category="villa" data-status="On Going">
+      <!-- <div class="project-card" data-category="villa" data-status="On Going">
         <div class="project-carousel">
           <div class="carousel-track">
             <div class="carousel-slide active" style="background-image: url('images/18.jpg');"></div>
@@ -762,10 +926,10 @@
             <li><strong>Client:</strong> Adel Rashid Mohd Rashed Al Shared Al Falasi</li>
             <li><strong>Consultant:</strong> Al Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Uniforce Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <!-- 11. Commercial/Residential Building (Karama) #2 -->
       <!-- <div class="project-card" data-category="commercial" data-status="On Going">
@@ -780,79 +944,79 @@
             <li><strong>Client:</strong> Mohammed Debaib Hamdan Almarar</li>
             <li><strong>Consultant:</strong> N/A</li>
             <li><strong>Main Contractor:</strong> Egy Build Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
 
-      <!-- 12. Karama Building Accord -->
-      <div class="project-card" data-category="commercial" data-status="On Going">
+      <!-- 12. Karama Building -->
+      <div class="project-card" data-category="commercial" data-status="Completed">
         <div class="project-img" style="background-image: url('images/21.jpg');">
-          <span class="project-tag">On Going</span>
+          <span class="project-tag">Completed</span>
         </div>
         <div class="project-info">
-          <h3>Karama Building Accord</h3>
+          <h3>Commercial/Residential Building</h3>
           <p class="project-details"><strong>Details:</strong> G+3+R Commercial & Residential Building, Plot No. 318-0676, at Karama, Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical, Plumbing & Low Current Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Rashed Mohammed Saeed Muaded Alneya</li>
             <li><strong>Consultant:</strong> Al Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Accord Building Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
-      <!-- 13. Commercial Building (Warqa) -->
-      <div class="project-card" data-category="commercial" data-status="On Going">
+      <!-- 13. Commercial Building -->
+      <div class="project-card" data-category="commercial" data-status="Completed">
         <div class="project-img" style="background-image: url('images/22.jpg');">
-          <span class="project-tag">On Going</span>
+          <span class="project-tag">Completed</span>
         </div>
         <div class="project-info">
-          <h3>Commercial Building (Warqa)</h3>
+          <h3>Commercial Building</h3>
           <p class="project-details"><strong>Details:</strong> G+R Commercial Building, Plot No. 421-0789, at Al Warqa First, Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Plumbing Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Ali Mohammad Hassan Al Mutawa</li>
             <li><strong>Consultant:</strong> Al Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Accord Building Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
-      <!-- 14. Residential Building (Hor Al Anz) -->
-      <div class="project-card" data-category="residential" data-status="Completed">
+      <!-- 14. Residential Building -->
+      <div class="project-card" data-category="residential" data-status="On Going">
         <div class="project-img" style="background-image: url('images/23.jpg');">
-          <span class="project-tag">Completed</span>
+          <span class="project-tag">On Going</span>
         </div>
         <div class="project-info">
-          <h3>Residential Building (Hor Al Anz)</h3>
+          <h3>Commercial/Residential Building</h3>
           <p class="project-details"><strong>Details:</strong> G+2+R Residential Building, Plot No. 127-2127, at Hor Al Anz, Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical & Plumbing Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Abdul Salam Ahmad Mohamed Bin Zaal</li>
             <li><strong>Consultant:</strong> Al Amir Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Kanz Alard Building Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
-      <!-- 15. Commercial/Residential Building (Satwa) -->
+      <!-- 15. Residential Building -->
       <div class="project-card" data-category="commercial" data-status="On Going">
         <div class="project-img" style="background-image: url('images/24.jpg');">
           <span class="project-tag">On Going</span>
         </div>
         <div class="project-info">
-          <h3>Commercial/Residential Building (Satwa)</h3>
-          <p class="project-details"><strong>Details:</strong> G+2+R Residential Building, Plot No. 333-0211, at Al Bada, Satwa, Dubai</p>
+          <h3>Residential Building</h3>
+          <p class="project-details"><strong>Details:</strong> G+2+R Residential Building, Plot No. 333-0211, at Al Bada, Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical, Plumbing and Low Current Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Khalid Hassan Mohammad Ali Taher (Mafaza Investment LLC)</li>
             <li><strong>Consultant:</strong> Al Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Mazi Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
@@ -880,19 +1044,19 @@
             <li><strong>Client:</strong> Saeed Ali Rubayyea Helal Almazrouei / Accord Building Cont.</li>
             <li><strong>Consultant:</strong> Winner Holistic Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Accord Building Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
       <!-- 17. -->
-      <div class="project-card" data-category="commercial" data-status="Completed">
+      <div class="project-card" data-category="commercial" data-status="On Going">
         <div class="project-carousel">
           <div class="carousel-track">
             <div class="carousel-slide active" style="background-image: url('images/27.png');"></div>
             <div class="carousel-slide" style="background-image: url('images/28.png');"></div>
           </div>
-          <span class="project-tag">Completed</span>
+          <span class="project-tag">On Going</span>
           <button class="carousel-btn prev-btn" aria-label="Previous Image">&#10094;</button>
           <button class="carousel-btn next-btn" aria-label="Next Image">&#10095;</button>
           <div class="carousel-dots">
@@ -901,14 +1065,14 @@
           </div>
         </div>
         <div class="project-info">
-          <h3>Commercial Building (Al Muteena) - 5 Buildings</h3>
+          <h3>Commercial/Residential Building - 5 Buildings</h3>
           <p class="project-details"><strong>Details:</strong> G+3+R Commercial / Residential Building, Plot Nos. 3180662, 3180770, 3180395, 3180111, 3180678, at Al Karama, Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical, Plumbing and Low Current Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Ahmad Mohamed Saif Bin Shafar & Saif Ahmad Mohammad Saif Bin Shafar</li>
             <li><strong>Consultant:</strong> Proline Engineering consultants</li>
             <li><strong>Main Contractor:</strong> Al Shafar National Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
@@ -936,7 +1100,7 @@
             <li><strong>Client:</strong> Mr. Ahmad Mohamed Saif Bin Shafar & Saif Ahmad Mohammad Saif Bin Shafar</li>
             <li><strong>Consultant:</strong> Proline Engineering consultants</li>
             <li><strong>Main Contractor:</strong> Al Shafar National Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
@@ -964,7 +1128,7 @@
             <li><strong>Client:</strong> Mr. Ahmad Mohamed Saif Bin Shafar & Saif Ahmad Mohammad Saif Bin Shafar</li>
             <li><strong>Consultant:</strong> Proline Engineering consultants</li>
             <li><strong>Main Contractor:</strong> Al Shafar National Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
@@ -992,7 +1156,7 @@
             <li><strong>Client:</strong> Mr. Ahmad Mohamed Saif Bin Shafar & Saif Ahmad Mohammad Saif Bin Shafar</li>
             <li><strong>Consultant:</strong> Proline Engineering consultants</li>
             <li><strong>Main Contractor:</strong> Al Shafar National Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
@@ -1020,13 +1184,13 @@
             <li><strong>Client:</strong> Mr. Ahmad Mohamed Saif Bin Shafar & Saif Ahmad Mohammad Saif Bin Shafar</li>
             <li><strong>Consultant:</strong> Proline Engineering consultants</li>
             <li><strong>Main Contractor:</strong> Al Shafar National Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div> -->
 
       <!-- 22. -->
-      <div class="project-card" data-category="residential" data-status="Completed">
+      <div class="project-card" data-category="residential" data-status="On Going">
         <!-- <div class="project-carousel">
           <div class="carousel-track">
             <div class="carousel-slide active" style="background-image: url('images/29.png');"></div>
@@ -1041,23 +1205,23 @@
           </div>
         </div> -->
         <div class="project-img" style="background-image: url('images/29.png');">
-          <span class="project-tag">Completed</span>
+          <span class="project-tag">On Going</span>
         </div>
         <div class="project-info">
-          <h3>Commercial/Residential Building (Karama)</h3>
+          <h3>Commercial/Residential Building</h3>
           <p class="project-details"><strong>Details:</strong> Proposed (G+3+R) Commercial / Residential Building on Plot No. 3180195 at Al Karama,Dubai,UAE</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical, Plumbing and Low Current Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mater Salem Obaid Alarti Alhemeri</li>
             <li><strong>Consultant:</strong> Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Uniforce Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
       <!-- 23. -->
-      <div class="project-card" data-category="residential" data-status="Completed">
+      <div class="project-card" data-category="residential" data-status="On Going">
         <!-- <div class="project-carousel">
           <div class="carousel-track">
             <div class="carousel-slide active" style="background-image: url('images/29.png');"></div>
@@ -1072,35 +1236,35 @@
           </div>
         </div> -->
         <div class="project-img" style="background-image: url('images/30.png');">
-          <span class="project-tag">Completed</span>
+          <span class="project-tag">On Going</span>
         </div>
         <div class="project-info">
-          <h3>Commercial/Residential Building (Karama)</h3>
+          <h3>Commercial/Residential Building</h3>
           <p class="project-details"><strong>Details:</strong> Proposed (G+3+R) Commercial / Residential Building on Plot No. 3180194 at Al Karama,Dubai,UAE</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical, Plumbing and Low Current Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mater Salem Obaid Alarti Alhemeri</li>
             <li><strong>Consultant:</strong> Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> Silver Land Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
 
       <!-- 24. -->
-      <div class="project-card" data-category="commercial" data-status="Completed">
+      <div class="project-card" data-category="commercial" data-status="On Going">
         <div class="project-img" style="background-image: url('images/31.png');">
-          <span class="project-tag">Completed</span>
+          <span class="project-tag">On Going</span>
         </div>
         <div class="project-info">
-          <h3>Commercial Building (Warqa)</h3>
-          <p class="project-details"><strong>Details:</strong> UG+G+M+R Commercial Shop, Plot No. 241-0417, At Al Nahda Second, Dubai</p>
+          <h3>Commercial Building</h3>
+          <p class="project-details"><strong>Details:</strong> G+M+R Commercial Building(47-Shops), Plot No. 241-0417, At Al Nahda Second, Dubai</p>
           <p class="project-scope"><strong>Scope:</strong> Supply & Installation of Electrical, Plumbing and Low Current Works</p>
           <ul class="project-meta">
             <li><strong>Client:</strong> Mr. Ahmad Mohammad Rashid Alwardi Almheiri, Abdulla Mohammed Ahmad Albasti Almarri</li>
             <li><strong>Consultant:</strong> Mishkat Engineering Consultants</li>
             <li><strong>Main Contractor:</strong> M/s. Silver Land Contracting LLC</li>
-            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works LLC</li>
+            <li><strong>MEP Contractor:</strong> Sustainable Gate Electromechanical Works L.L.C</li>
           </ul>
         </div>
       </div>
@@ -1114,41 +1278,54 @@
     <section class="section">
       <div class="section-header">
         <span class="tagline">Contact</span>
-        <h2 class="section-title">Sustainable Gate Electromechanical Works LLC</h2>
+        <h2 class="section-title">Sustainable Gate Electromechanical Works L.L.C</h2>
         <p class="section-description">Request a consultation, emergency maintenance, and formal quotation.</p>
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px;">
         <div style="background: var(--surface); padding: 35px; border-radius: 12px; border: 1px solid var(--border);">
           <h3 style="margin-bottom: 25px; color: var(--primary);">Contact Details</h3>
-
-          <div style="margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start;">
-            <i class="fa-solid fa-location-dot" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
-            <div>
-              <strong>Office Location</strong>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">Dubai, United Arab Emirates</p>
-            </div>
-          </div>
-
-          <div style="margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start;">
-            <i class="fa-solid fa-phone" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
-            <div>
-              <strong>Phone & WhatsApp</strong>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">Tel: 04-2884127 / +971 5 893 58287</p>
-            </div>
-          </div>
-
+      
           <div style="margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start;">
             <i class="fa-solid fa-envelope" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
             <div>
               <strong>Email Inquiries</strong>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">info@sustainablegate.ae</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin: 2px 0 0 0;">info@sustainablegate.ae</p>
+            </div>
+          </div>
+      
+          <div style="margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <i class="fa-solid fa-phone" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
+            <div>
+              <strong>Phone</strong>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin: 2px 0 0 0;">Tel: 04-2884127</p>
+            </div>
+          </div>
+      
+          <div style="margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <i class="fa-solid fa-location-dot" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
+            <div>
+              <strong>Location</strong>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin: 2px 0 0 0;">Office No. 201, Al Khabaisi, P.O.
+                Box: 55336, Dubai - UAE</p>
+            </div>
+          </div>
+      
+          <div style="margin-bottom: 10px; display: flex; gap: 15px; align-items: flex-start;">
+            <i class="fa-brands fa-square-whatsapp" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i>
+            <div>
+              <strong>WhatsApp Chat</strong>
+              <div style="margin-top: 4px;">
+                <a href="https://wa.me/971589358287" target="_blank" rel="noopener noreferrer"
+                  style="display: inline-flex; align-items: center; gap: 8px; background-color: rgba(37, 211, 102, 0.1); color: #128c7e; padding: 6px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s;">
+                  <i class="fa-solid fa-comment-dots"></i> Connect with Our Team
+                </a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div
-          style="max-width: 800px; margin: 0 auto; background: var(--surface); padding: 35px; border-radius: 12px; border: 1px solid var(--border);">
+      
+        <div style="max-width: 800px; margin: 0 auto; background: var(--surface); padding: 35px; border-radius: 12px; border: 1px solid var(--border);">
           <form onsubmit="sendToWhatsApp(event)">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
               <div class="form-group">
@@ -1185,6 +1362,20 @@
         </div>
       </div>
     </section>
+
+    <!-- Google Map Embed Container -->
+<div class="map-container" style="margin-top: 25px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+  <iframe 
+    src="https://maps.google.com/maps?q=Sustainable%20Gate%20Electromechanical%20Works%20LLC%20Dubai&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    width="100%" 
+    height="320" 
+    style="border: 0; display: block;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Sustainable Gate Electromechanical Works LLC Location">
+  </iframe>
+</div>
   </div>
 
   <!-- Footer -->
@@ -1201,8 +1392,8 @@
             <span class="font-oswald logo-subtitle">ELECTRO MECHANICAL WORKS L.L.C</span>
           </div>
         </a>
-        <p>Sustainable Gate Electromechanical Works LLC is a premier provider of MEP, fit-out, civil, and maintenance
-          services committed to quality execution across the UAE.</p>
+        <p>Our integrated approach brings together engineering excellence and efficient project execution to improve project performance, optimize resource utilization, and deliver sustainable, long-term results.<br><br>
+        <em>Sustainable Gate – Engineering Excellence.. Smarter Solutions.. Lasting Value..</em></p>
 
         <!-- Social Media & Google Maps Links -->
         <div class="footer-social-links">
@@ -1256,7 +1447,7 @@
     </div>
 
     <div class="footer-bottom">
-      <div>&copy; 2026 Sustainable Gate Electromechanical Works LLC. All rights reserved.</div>
+      <div>&copy; 2026 Sustainable Gate Electromechanical Works L.L.C. All rights reserved.</div>
       <div>Privacy Policy | Terms of Service</div>
     </div>
   </footer>
