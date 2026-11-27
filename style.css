@@ -569,7 +569,7 @@ header {
 footer {
   background-color: var(--surface);
   color: #1E293B;
-  padding: 70px 5% 20px;
+  margin: 0 auto;
 }
 
 .footer-container {
@@ -1225,6 +1225,7 @@ ul, ol {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr; /* 4 distinct columns */
   gap: 30px;
+  padding: 70px 5% 20px;
 }
 
 /* This unwraps the div on desktop so Quick Links & Services act as independent grid items */
